@@ -5,19 +5,24 @@ public class Flight {
     private String id;
     private String flightId;
     private String planetype;//飞机类型
-    private int dangqianSeatsNum;//当前座位数
-    private String form;//出发地
-    private String to;//目的地
-    private String formtime;//起飞时间
+    private int currentSeatsNum;//当前座位数
+    private String departureAirPort;//出发地
+    private String dstinationAirPort;//目的地
+    private String departureTime;//起飞时间
 
 
-    public Flight(String flightId, String planetype, int dangqianSeatsNum, String form, String to, String formtime) {
+    public Flight(String id, String flightId, String planetype, int currentSeatsNum, String departureAirPort, String dstinationAirPort, String departureTime) {
+        this.id = id;
         this.flightId = flightId;
         this.planetype = planetype;
-        this.dangqianSeatsNum = dangqianSeatsNum;
-        this.form = form;
-        this.to = to;
-        this.formtime = formtime;
+        this.currentSeatsNum = currentSeatsNum;
+        this.departureAirPort = departureAirPort;
+        this.dstinationAirPort = dstinationAirPort;
+        this.departureTime = departureTime;
+    }
+
+    public Flight(Object flightId, String planetype, int dangqianSeatsNum, String form, String to, String formtime) {
+
     }
 
     public String getId() {
@@ -44,49 +49,52 @@ public class Flight {
         this.planetype = planetype;
     }
 
-    public int getDangqianSeatsNum() {
-        return dangqianSeatsNum;
+    public int getCurrentSeatsNum() {
+        return currentSeatsNum;
     }
 
-    public void setDangqianSeatsNum(int dangqianSeatsNum) {
-        this.dangqianSeatsNum = dangqianSeatsNum;
+    public void setCurrentSeatsNum(int currentSeatsNum) {
+        this.currentSeatsNum = currentSeatsNum;
     }
 
-    public String getForm() {
-        return form;
+    public String getDepartureAirPort() {
+        return departureAirPort;
     }
 
-    public void setForm(String form) {
-        this.form = form;
+    public void setDepartureAirPort(String departureAirPort) {
+        this.departureAirPort = departureAirPort;
     }
 
-    public String getTo() {
-        return to;
+    public String getDstinationAirPort() {
+        return dstinationAirPort;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setDstinationAirPort(String dstinationAirPort) {
+        this.dstinationAirPort = dstinationAirPort;
     }
 
-
-    public String getFormtime() {
-        return formtime;
+    public String getDepartureTime() {
+        return departureTime;
     }
 
-    public void setFormtime(String formtime) {
-        this.formtime = formtime;
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
     }
-
 
     @Override
     public String toString() {
         return "Flight{" +
-                "flightId='" + flightId + '\'' +
+                "id='" + id + '\'' +
+                ", flightId='" + flightId + '\'' +
                 ", planetype='" + planetype + '\'' +
-                ", dangqianSeatsNum=" + dangqianSeatsNum +
-                ", form='" + form + '\'' +
-                ", to='" + to + '\'' +
-                ", formtime='" + formtime + '\'' +
+                ", currentSeatsNum=" + currentSeatsNum +
+                ", departureAirPort='" + departureAirPort + '\'' +
+                ", dstinationAirPort='" + dstinationAirPort + '\'' +
+                ", departureTime='" + departureTime + '\'' +
                 '}';
     }
+
+
+
 }
+

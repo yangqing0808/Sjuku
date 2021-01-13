@@ -43,7 +43,7 @@ public class MainUi {
                 System.out.print("请输入起飞时间：");
                 String formtime=sc.next();
 
-                Flight flight=new Flight(flightId,planetype,dangqianSeatsNum,form,to,formtime);
+                Flight flight=new Flight(id,flightId,planetype,dangqianSeatsNum,form,to,formtime);
 
                 IFlightServer iFlightServer=new FlightServerImpl();
                 iFlightServer.insertFlight(flight);
