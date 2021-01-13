@@ -8,7 +8,7 @@ import java.util.Set;
 
 public interface IFlightDao {
     void insertFlight(Flight flight) throws SQLException;
-    Set<Flight> getAllFlights();
+    Set<Flight> getAllFlights() throws SQLException;
     Flight getFlightByformtime(String formtime);
     Flight getFlightByform(String form);
     Flight getFlightByto(String to);

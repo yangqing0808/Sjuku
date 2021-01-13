@@ -81,20 +81,18 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
+
     @Override
     public String toString() {
         return "Flight{" +
                 "id='" + id + '\'' +
-                ", flightId='" + flightId + '\'' +
-                ", planetype='" + planetype + '\'' +
-                ", currentSeatsNum=" + currentSeatsNum +
-                ", departureAirPort='" + departureAirPort + '\'' +
-                ", dstinationAirPort='" + dstinationAirPort + '\'' +
-                ", departureTime='" + departureTime + '\'' +
-                '}';
+                ", 航班ID='" + flightId + '\'' +
+                ", 机型='" + planetype + '\'' +
+                ", 座位号数=" + currentSeatsNum +
+                ", 起飞机场='" + departureAirPort + '\'' +
+                ", 目的机场='" + dstinationAirPort + '\'' +
+                ", 起飞时间='" + departureTime + '\'' +
+                '}'+"\n";
     }
-
-
-
 }
 

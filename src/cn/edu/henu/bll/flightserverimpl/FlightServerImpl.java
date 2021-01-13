@@ -4,19 +4,30 @@ package cn.edu.henu.bll.flightserverimpl;
 //import cn.edu.hcnu.bll.IFlightServer;
 import cn.edu.henu.bean.Flight;
 import cn.edu.henu.bll.IFlightServer;
+import cn.edu.henu.dao.IFlightDao;
+import cn.edu.henu.dao.impl.FlightDaoIml;
 
+import java.sql.SQLException;
 import java.util.Set;
 
 public class FlightServerImpl implements IFlightServer {
+    IFlightDao flightDao;
 
-    @Override
-    public void insertFlight(Flight flight) {
-        System.out.println("界面传来的信息" + flight);
+    public FlightServerImpl() {
+        this.flightDao = new FlightDaoIml();
     }
 
     @Override
-    public Set<Flight> getAllFlights() {
-        return null;
+    public void insertFlight(Flight flight) throws SQLException {
+
+     //   System.out.println("界面传来的信息" + flight);
+        flightDao.insertFlight(flight);
+    }
+
+    @Override
+    public Set<Flight> getAllFlights() throws SQLException {
+
+        return flightDao.getAllFlights();
     }
 
     @Override
